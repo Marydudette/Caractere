@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roue des Traits - Super-Héros</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e0e1a;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .filters button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #00ffff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .filters button.active {
+      background-color: #00ffff;
+      color: #000;
+    }
+    .trait-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .trait {
+      background-color: #1a1a2f;
+      border: 1px solid #444;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+    }
+    .controls {
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .controls button {
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Roue des Traits</h1>
+  <div class="filters">
+    <button onclick="filterCategory('all')" class="active">Tous</button>
+    <button onclick="filterCategory('mental')">Mentaux</button>
+    <button onclick="filterCategory('emotionnel')">Émotionnels</button>
+    <button onclick="filterCategory('social')">Sociaux</button>
+    <button onclick="filterCategory('volonte')">Volonté</button>
+    <button onclick="filterCategory('morale')">Moraux</button>
+  </div>
+
+  <div class="controls">
+    <button onclick="randomTraits('quality', 3)">🎲 Tirer 3 qualités</button>
+    <button onclick="randomTraits('flaw', 3)">🎲 Tirer 3 défauts</button>
+    <button onclick="generateBalancedCombo()">⚖️ Combo équilibré (6 traits équilibrés)</button>
+    <button onclick="drawRandomTrait()">🎯 Tirer un trait au hasard</button>
+  </div>
+
+  <div class="trait-list" id="traitList"></div>
+
+  <script>
+    const opposites = { ... };
+    const qualities = [ ... ];
+    const flaws = [ ... ];
+
+    let currentCategory = 'all';
+
+    function renderTraits(list) { ... }
+
+    function filterCategory(category) { ... }
+
+    function randomTraitsByCategory(sourceList, categories, excluded = []) { ... }
+
+    function generateBalancedCombo() { ... }
+
+    function randomTraits(type, count) { ... }
+
+    function drawRandomTrait() { ... }
+
+    renderTraits([...qualities, ...flaws]);
+  </script>
+</body>
+</html>
